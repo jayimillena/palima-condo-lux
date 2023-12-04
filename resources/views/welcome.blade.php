@@ -872,7 +872,7 @@
 
           <div class="testimonial-item">
             <img src="assets/img/team/team9.jpg" class="testimonial-img" alt="">
-            <h3>FATIMA PALIMA</h3>
+            <h3></h3>
             <h4>HOA</h4> &amp; OWNER</h4>
             <p>
               <i class="bx bxs-quote-alt-left quote-icon-left"></i>
@@ -937,7 +937,7 @@
           </div>
 
         </div>
-
+        
       </div>
     </section><!-- End Testimonials Section -->
 
@@ -952,11 +952,11 @@
         </div>
 
         <div class="row">
-
+          @foreach ($agents as $agent)
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
             <div class="member" data-aos="fade-up" data-aos-delay="100">
               <div class="member-img">
-                <img src="assets/img/team/team9.jpg" class="img-fluid" alt="">
+                <img src="assets/img/team/{{ $agent->profile_image }}" class="img-fluid" alt="">
                 <div class="social">
                   <a href=""><i class="icofont-twitter"></i></a>
                   <a href=""><i class="icofont-facebook"></i></a>
@@ -965,104 +965,12 @@
                 </div>
               </div>
               <div class="member-info">
-                <h4>Fatima Palima</h4>
-                <span>Home Owner's Association</span>
+                <h4>{{ $agent->name }}</h4>
+                <span>{{ $agent->job_description }}</span>
               </div>
-            </div>
+            </div>  
           </div>
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="200">
-              <div class="member-img">
-                <img src="assets/img/team/team13.jpeg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="icofont-twitter"></i></a>
-                  <a href=""><i class="icofont-facebook"></i></a>
-                  <a href=""><i class="icofont-instagram"></i></a>
-                  <a href=""><i class="icofont-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>KIMBERLY BOLANTE</h4>
-                <span>Loan Officer and Loan Servicer</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="300">
-              <div class="member-img">
-                <img src="assets/img/team/team12.jpeg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="icofont-twitter"></i></a>
-                  <a href=""><i class="icofont-facebook"></i></a>
-                  <a href=""><i class="icofont-instagram"></i></a>
-                  <a href=""><i class="icofont-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>SEAN CARL ARTIAGA</h4>
-                <span>Mortage lender and Mortage Broker</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="400">
-              <div class="member-img">
-                <img src="assets/img/team/team14.jpeg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="icofont-twitter"></i></a>
-                  <a href=""><i class="icofont-facebook"></i></a>
-                  <a href=""><i class="icofont-instagram"></i></a>
-                  <a href=""><i class="icofont-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>JOSUA LORIA</h4>
-                <span>Real State Agent</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="400">
-              <div class="member-img">
-                <img src="assets/img/team/team10.jpeg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="icofont-twitter"></i></a>
-                  <a href=""><i class="icofont-facebook"></i></a>
-                  <a href=""><i class="icofont-instagram"></i></a>
-                  <a href=""><i class="icofont-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>MARK JAY MARCAYDA</h4>
-                <span>HOME INSPECTOR</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="400">
-              <div class="member-img">
-                <img src="assets/img/team/team11.jpeg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="icofont-twitter"></i></a>
-                  <a href=""><i class="icofont-facebook"></i></a>
-                  <a href=""><i class="icofont-instagram"></i></a>
-                  <a href=""><i class="icofont-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>JOHN MICHAEL LOMERIO</h4>
-                <span>Home Appraiser</span>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
+          @endforeach
       </div>
     </section><!-- End Team Section -->
 

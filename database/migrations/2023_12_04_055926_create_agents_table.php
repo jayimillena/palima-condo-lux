@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('job_description');
+            $table->string('profile_image')->default('default.jpeg');
             $table->timestamps();
         });
     }

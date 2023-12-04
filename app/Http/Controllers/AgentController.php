@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Agent;
 
 class AgentController extends Controller
 {
@@ -11,7 +12,7 @@ class AgentController extends Controller
      */
     public function index()
     {
-        return view('welcome');
+        return view('welcome', ['agents' => Agent::all()]);
     }
 
     /**
@@ -27,7 +28,13 @@ class AgentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $agent = new Agent;
+        $agent->name = $request->name; 
+        $agent->job_description = $request->job_description; 
+
+        $agent->save();
+
+        return redirect()->route('agent.index');
     }
 
     /**
